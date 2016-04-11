@@ -5,50 +5,66 @@
  
 /* NAV BAR */
 #custom-bootstrap-menu.navbar-default .navbar-brand {
-    color: rgba(255, 247, 247, 1);
+    color: rgba(255, 255, 255, 1);
 }
 #custom-bootstrap-menu.navbar-default {
     font-size: 16px;
-    background-color: rgba(112, 111, 111, 1);
+    background-color: rgba(0, 0, 0, 0.47);
     border-bottom-width: 0px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(224, 224, 224, 1);
-    background-color: rgba(248, 248, 248, 0);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.47);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(46, 45, 45, 1);
-    background-color: rgba(248, 248, 248, 0);
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(0, 0, 0, 0.45);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(85, 85, 85, 1);
-    background-color: rgba(231, 231, 231, 1);
+    background-color: rgba(0, 0, 0, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #ddd;
+    border-color: #000000;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #ddd;
+    background-color: #000000;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #888;
+    background-color: #000000;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #706f6f;
+    background-color: #000000;
 }
 
 /*BODY*/
+#heroimage {
+  text-align: center;
+  background-image: url('/assets/Bikeberlinheader.jpg');
+  background-position: center;
+  padding-bottom: 41%;
+  padding-top: 39%;
+}
+
 .header {
   margin-top: 70px;
+  padding-bottom: 5%;
   text-align: center;
 }
 
+#featured {
+  padding-left: 7.5%;
+  margin-right: 7%;
+}
 
+#bikesforsale {
+  padding-bottom: 5%;
+}
 
 h1 {
   font-size: 30px;
