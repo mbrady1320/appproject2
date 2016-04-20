@@ -2,85 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- 
-/* NAV BAR */
-#custom-bootstrap-menu.navbar-default .navbar-brand {
-    color: rgba(255, 255, 255, 1);
-    font-family: Raleway, Serif;
-}
-#custom-bootstrap-menu.navbar-default {
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.47);
-    border-bottom-width: 0px;
-}
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 0.47);
-    font-family: Raleway, Serif;
-}
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(51, 51, 51, 1);
-    background-color: rgba(0, 0, 0, 0.45);
-}
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(85, 85, 85, 1);
-    background-color: rgba(0, 0, 0, 0);
-}
-#custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #000000;
-}
-#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
-#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #000000;
-}
-#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #000000;
-}
-#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
-#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #000000;
-}
-
-/*BODY - INDEX.HTML*/
-#heroimage {
-  background:
-    url('/assets/Bikeberlinheroimage.jpg') center;
-  padding-top: 39%;
-  padding-bottom: 4.95%;
-  text-align: center;
-}
 
 
-#title {
-  margin-top: -35%;
-  
-}
 
-h1 {
-  text-align: center;
-  font-family: Raleway,Sans Serif;
-  font-size: 6em;
-  font-weight: 800;
-  color: #FCF8E3;
-}
-
-h3 {
-  color: #FCF8E3;
-  font-family: Monstserrat, Sans Serif;
-}
-
-footer {
-  text-align: center;
-  color: white;
-  bottom: 0;
-  width: 100%; 
-  height: 50px;
-  background-color: #706F6F;
-  font-family: Raleway, Serif;
-}
 
 
 
