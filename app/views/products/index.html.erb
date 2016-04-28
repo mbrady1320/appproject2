@@ -19,6 +19,7 @@
         <p><%= product.price %></p>
       
         <button type="button" class="btn btn-secondary"><%= link_to 'show', product %></button>
+        <button type="button" class="btn btn-secondary"><a href="https://bikeberlin2016.herokuapp.com/products/new">new</a></button>
         <button type="button" class="btn btn-secondary"><%= link_to 'edit', edit_product_path(product) %></button>
         <button type="button" class="btn btn-secondary"><%= link_to 'destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         
