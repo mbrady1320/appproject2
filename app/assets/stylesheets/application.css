@@ -55,6 +55,11 @@
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #000000;
 }
+/*BODY*/
+
+body {
+  background-color: #F5F3F3;
+}
 
 /*FOOTER*/
 
@@ -66,4 +71,17 @@ footer {
   height: 50px;
   background-color: #706F6F;
   font-family: Raleway, Serif;
+}
+
+/*TYPOGRAPHY*/
+
+h1
+h2
+h3 {
+  font-family: Raleway, Sans serif
+    
+}
+
+p {
+  font-family: Montserrat, Serif
 }
