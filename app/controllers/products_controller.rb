@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   def index
     @products = Product.all
+    @test_variable = 42 
   end
 
   # GET /products/1
