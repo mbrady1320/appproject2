@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
-    @test_variable = 42 
+    @products = Product.limit(3)
+    render layout: "products"
   end
 
   # GET /products/1
