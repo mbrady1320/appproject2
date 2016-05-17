@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>bike berlin</title>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
-  <!-- Typography -->
-  <link href='https://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
-
+  <meta name="viewport" content="width=device-width, intital-scale=1">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+​
+​
 </head>
-
+​
 <body>
-  <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">bike berlin</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://bikeberlin2016.herokuapp.com">home</a>
-                </li>
-                <li><a href="https://bikeberlin2016.herokuapp.com/products">products</a>
-                </li>
-                <li><a href="https://bikeberlin2016.herokuapp.com/about">about</a>
-                </li>
-                <li><a href="https://bikeberlin2016.herokuapp.com/contact">contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
   
-  
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid" id="navigation-banner">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Mynavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="brandname" href="#">bike berlin</a>
+    </div><!--end navbar-header-->
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="Mynavbar">
+      <ul class="nav navbar-nav navbar-right">
+          <li><%=link_to'HOME', static_pages_index_path%></li>
+          <li><%=link_to'PRODUCT', products_path%></li>
+          <li><%=link_to'ORDER', orders_path%></li>
+      </ul>
+      
+              
+              
+          <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
+              <div class="form-group">
+                <%= label_tag(:q, "Search for:",class:"sr-only") %>
+                <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
+              </div>
+                <%= submit_tag("Find",class:"btn btn-default btn-green") %>
+            <% end %>
+               
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 <%= yield %>
 
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2015 bike berlin</p>
-  </div>
-</footer>
-</body>
+<% if notice %>
+  <div id="notice" class="alert alert-info" role="alert"><%= notice %></div>
+<% end %>
 
+<% if alert %>
+  <div class="alert alert-danger" role="alert" ><%= alert %></div>
+<% end %>  
+
+<div id="footer">
+  &copy; 2016 Melissa
+</div>
+
+</body>
 </html>
