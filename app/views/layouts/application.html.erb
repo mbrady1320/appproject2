@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>bike berlin</title>
   
+  <!-- Stylesheets -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
+  <!-- Typography -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, intital-scale=1">
   
   <%= csrf_meta_tags %>
-​
-​
+
+
 </head>
-​
+
 <body>
   
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -36,25 +40,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="Mynavbar">
       <ul class="nav navbar-nav navbar-right">
-          <li><%=link_to'HOME', static_pages_index_path%></li>
-          <li><%=link_to'PRODUCT', products_path%></li>
-          <li><%=link_to'ORDER', orders_path%></li>
-          <li><%=link_to'ABOUT', static_pages_about_path%></li>
+        <li><%=link_to'HOME', static_pages_index_path%></li>
+        <li><%=link_to'ABOUT', static_pages_about_path%></li>
+        <li><%=link_to'PRODUCT', products_path%></li>
+        <li><%=link_to'ORDER', orders_path%></li>
+        <li><%=link_to'CONTACT', static_pages_contact_path%></li>
       </ul>
-      
-              
-              
-          <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
-              <div class="form-group">
-                <%= label_tag(:q, "Search for:",class:"sr-only") %>
-                <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
-              </div>
-                <%= submit_tag("Find",class:"btn btn-default btn-green") %>
-            <% end %>
-               
+      <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
+        <div class="form-group">
+          <%= label_tag(:q, "Search for:",class:"sr-only") %>
+          <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
+        </div>
+          <%= submit_tag("Find",class:"btn btn-default btn-green") %>
+          <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+  </nav>
 
 <%= yield %>
 
@@ -66,9 +67,10 @@
   <div class="alert alert-danger" role="alert" ><%= alert %></div>
 <% end %>  
 
-<div id="footer">
-  &copy; 2016 Melissa
-</div>
+
 
 </body>
+<footer>
+  &copy; 2016 bike berlin
+</footer>
 </html>
