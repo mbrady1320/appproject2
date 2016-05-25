@@ -1,21 +1,36 @@
 <div class="container" id="contact-container">
-  <div class="header">
+  <div class="header" id="contact-header">
     <h1>contact</h1>
     <p>NEED TO CONTACT US? SHOOT US AN EMAIL!</p>
   </div>
-  <div id="form-container">
-    <div class="form-group">
-      <label for="name" class="sr-only">Name</label>
-      <input type="textBox" id="name" placeholder="Name*" class="form-control" required="required">
-    </div><!-- /form-group -->  
-    <div class="form-group">
-      <label for="email" class="sr-only">Email</label>
-      <input type="email" id="email" placeholder="Email*" class="form-control" required="required">
-    </div><!-- /form-group -->  
-    <div class="form-group">
-      <label for="message" class="sr-only">Message</label>
-      <textarea class="form-control message-box" id="message" style="resize: none" required="required" placeholder="Your message here" cols="40" rows="7"></textarea>
-    </div><!-- /form-group -->
-    <button type="button" class="btn btn-secondary">submit</button>
-  </div><!-- /form-container -->
+  
+  <div class="col-lg-6 col-sm-12">
+    <%= image_tag ("contactphoto.jpeg") %>
+  </div><!--/col-lg-6 col-sm-12-->
+  
+  <div class="col-lg-6 col-sm-12">
+    <div id="form-container">
+      
+      <div class="form-group">
+        <label for="name" class="sr-only">Name</label>
+        <input type="textBox" id="name" placeholder="Name*" class="form-control" required="required">
+      </div><!-- /form-group -->  
+      
+      <div class="form-group">
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" placeholder="Email*" class="form-control" required="required">
+      </div><!-- /form-group --> 
+      
+      <div class="form-group">
+        <label for="message" class="sr-only">Message</label>
+        <textarea class="form-control message-box" id="message" style="resize: none" required="required" placeholder="Your message here" cols="40" rows="7"></textarea>
+      </div><!-- /form-group -->
+      
+      <button type="button" class="btn btn-secondary">submit</button>
+    
+    </div><!-- /form-container -->
+  </div><!--/col-lg-6 col-sm-12-->
+  
+  
+
 </div>

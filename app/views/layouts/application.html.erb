@@ -45,14 +45,17 @@
         <li><%=link_to'PRODUCT', products_path%></li>
         <li><%=link_to'ORDER', orders_path%></li>
         <li><%=link_to'CONTACT', static_pages_contact_path%></li>
-      </ul>
-      <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
-        <div class="form-group">
-          <%= label_tag(:q, "Search for:",class:"sr-only") %>
-          <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
-        </div>
-          <%= submit_tag("Find",class:"btn btn-default btn-green") %>
+        <div class="form-group product-search">
+          <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
+       
+            <%= label_tag(:q, "Search for:",class:"sr-only") %>
+            <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
+        
+            <%= submit_tag("Find",class:"btn btn-default btn-green") %>
           <% end %>
+        </div>
+      </ul>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
   </nav>
@@ -67,10 +70,16 @@
   <div class="alert alert-danger" role="alert" ><%= alert %></div>
 <% end %>  
 
-
+<footer>
+  <div id="social-media">
+  <%= image_tag ("facebook.png") %>
+  <%= image_tag ("twitter.png") %>
+  <%= image_tag ("instagram.png") %>
+  </div>
+  <p class="copywrite">&copy; 2016 bike berlin</p>
+  
+</footer>
 
 </body>
-<footer>
-  &copy; 2016 bike berlin
-</footer>
+
 </html>

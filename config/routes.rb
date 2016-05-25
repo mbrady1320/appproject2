@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-  root 'static_pages#index'
+  root 'static_pages#about'
 
 
   resources :orders, only: [:index, :show, :create, :destroy]
