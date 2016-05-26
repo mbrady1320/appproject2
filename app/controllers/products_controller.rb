@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.limit(3)
+    @products = Product.all
   end
 
   # GET /products/1
@@ -22,11 +22,15 @@ class ProductsController < ApplicationController
   # POST /products
   def create
     @product = Product.new(product_params)
-
-    if @product.save
-      redirect_to @product, notice: 'Product was successfully created.'
-    else
-      render :new
+   
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to "/products/index", notice: 'Product was successfully created.' }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new }
+        format.json { render json: @products.errors, status: :unprocessable_entity }
+      end
     end
   end
 

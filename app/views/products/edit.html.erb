@@ -1,6 +1,10 @@
-<h1>Editing Product</h1>
+<div id="edit">
+  <h1 class="edit-header">edit product</h1>
 
-<%= render 'form' %>
+  <div id="edit-form">
+    <%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+    <%= link_to 'Show', @product %> |
+    <%= link_to 'Back', products_path %>
+  </div><!--/edit-form-->
+</div><!--/edit-->
