@@ -45,18 +45,16 @@
         <li><%=link_to'PRODUCT', products_path%></li>
         <li><%=link_to'ORDER', orders_path%></li>
         <li><%=link_to'CONTACT', static_pages_contact_path%></li>
-        <div class="form-group product-search">
+        <li class="form-group product-search">
           <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
-       
             <%= label_tag(:q, "Search for:",class:"sr-only") %>
             <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
-        
             <%= submit_tag("Find",class:"btn btn-default btn-green") %>
           <% end %>
-        </div>
+        </li><!--/form-group product-search-->
       </ul>
-      
     </div><!-- /.navbar-collapse -->
+    
   </div><!-- /.container-fluid -->
   </nav>
 
