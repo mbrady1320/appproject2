@@ -4,13 +4,12 @@ class ProductsController < ApplicationController
   # GET /products
   def index
     if params[:q]
-      search_term = params[:q]
-      @products = Product.where("name LIKE?", "%#{search_term}%")
-      # return our filtered list here
+      @products = Product.where("LOWER(name)LIKE? OR LOWER(description)LIKE?", "%#{search_term.downcase}%", "%#{search_term.downcase}")
     else
-      @products = Product.allow
+      @products = Product.all
     end
   end
+  
 
   # GET /products/1
   def show
