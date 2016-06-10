@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Contact Form Message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <table border="1" cellpadding="0" cellspacing="0" width="100%">
+    <table align="center" border="1" cellpadding="0" cellspacing="0" width="600px" style="border-collapse: collapse;">
+      
+      <tr>
+        <td>
+          <%= image_tag("contact-form-template.jpg") %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <p style="text-align: center; padding: 25px;">You have received a new contact form message. The contents of the message are:</p>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <p style="text-align: center; padding: 50px; background-color: #ffff99; "><%= @message %></p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <p class="copywrite" style="text-align: center; padding-top: 10px;">&copy; bike berlin 2016</p>
+          <p style="text-align: center;">
+            <%= image_tag ("facebook.png") %>
+            <%= image_tag ("twitter.png") %>
+            <%= image_tag ("instagram.png") %>
+          </p>
+        </td>
+      </tr>
+      
+    </table>
+  </table>
+</body>
