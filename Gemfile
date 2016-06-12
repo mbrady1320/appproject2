@@ -9,6 +9,8 @@ gem 'turbolinks'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise'
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
