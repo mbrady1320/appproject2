@@ -1,0 +1,29 @@
+<div class="login-container">
+  <h1 id="login-header">log in</h1>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div><!--/field-->
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div><!--/field-->
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div><!--/field-->
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div><!--/field-->
+    <% end %>
+
+<%= render "devise/shared/links" %>
+
+</div><!--/login-container-->
