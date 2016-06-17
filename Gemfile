@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'byebug'
