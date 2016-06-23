@@ -3,36 +3,45 @@
     <h1 class="product-show-header">product details</h1>
 
   <div id="details">
-    <p>
-      <strong>Image</strong>
+    
+    <div class="col-lg-7 col-sm-12" id="show-image-column">
       <%= image_tag(@product.image_url, class: "img-responsive product-image-show") %>
-    </p>
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-    <p>
-      <strong>Text:</strong>
-      <%= @product.text %>
-    </p>
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-    <p>
-      <strong>Price:</strong>
-      <%= @product.price %>
-    </p>
-    <p id="comments">
-      <strong>Comments:</strong>
-    </p>
+    </div><!--/col-lg-8 col-sm-12-->
+    
+    <div class="col-lg-5 col-sm-12" id="show-image-details">
+      <p id="show-deets">
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
+     
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+    
+      <p>
+        <strong>Text:</strong>
+        <%= @product.text %>
+      </p>
+    
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
+      
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
+    
+      <p id="comments">
+        <strong>Comments:</strong>
+      </p>
 
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
+    </div><!--/col-lg-4 col-sm-12"-->
+  
   </div><!--/details-->
   
 </div><!--/products-show-->

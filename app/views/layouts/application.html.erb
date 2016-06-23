@@ -40,20 +40,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="Mynavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="form-group product-search">
-          <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
-            <%= label_tag(:q, "Search for:",class:"sr-only") %>
-            <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
-            <%= submit_tag("Find",class:"btn btn-default btn-green") %>
-          <% end %>
-        </li><!--/form-group product-search-->
+        
         <li><%=link_to'HOME', static_pages_index_path%></li>
         <li><%=link_to'ABOUT', static_pages_about_path%></li>
         <li><%=link_to'PRODUCT', products_path%></li>
         <li><%=link_to'ORDER', orders_path%></li>
         <li><%=link_to'CONTACT', static_pages_contact_path%></li>
-      </ul>
-      <ul class = "nav pull-right">
         <li>
           <% if user_signed_in? %>
             <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %> 
@@ -61,7 +53,15 @@
             <%= link_to('LOGIN', new_user_session_path) %>
           <% end %>
         </li>
+        <li class="form-group product-search">
+          <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
+            <%= label_tag(:q, "Search for:",class:"sr-only") %>
+            <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
+            <%= submit_tag("Find",class:"btn btn-default btn-green") %>
+          <% end %>
+        </li><!--/form-group product-search-->
       </ul>
+      
     </div><!-- /.navbar-collapse -->
     
   </div><!-- /.container-fluid-->
