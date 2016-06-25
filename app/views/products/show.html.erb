@@ -38,35 +38,6 @@
         <strong>Comments:</strong>
       </p>
 
-    <p>
-      <strong>Image</strong>
-      <%= image_tag(@product.image_url, class: "img-responsive product-image-show") %>
-    </p>
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-    <p>
-      <strong>Text:</strong>
-      <%= @product.text %>
-    </p>
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-    <p>
-      <strong>Price:</strong>
-      <%= @product.price %>
-    </p>
-    <p id="comments">
-      <strong>Comments:</strong>
-    </p>
-
-
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
     </div><!--/col-lg-4 col-sm-12"-->
