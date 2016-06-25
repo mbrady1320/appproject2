@@ -3,7 +3,6 @@
     <h1 class="product-show-header">product details</h1>
 
   <div id="details">
-<<<<<<< HEAD
     
     <div class="col-lg-7 col-sm-12" id="show-image-column">
       <%= image_tag(@product.image_url, class: "img-responsive product-image-show") %>
@@ -38,7 +37,7 @@
       <p id="comments">
         <strong>Comments:</strong>
       </p>
-=======
+
     <p>
       <strong>Image</strong>
       <%= image_tag(@product.image_url, class: "img-responsive product-image-show") %>
@@ -66,7 +65,7 @@
     <p id="comments">
       <strong>Comments:</strong>
     </p>
->>>>>>> master
+
 
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
