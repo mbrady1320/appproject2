@@ -6,6 +6,7 @@
     
     <div class="col-lg-7 col-sm-12" id="show-image-column">
       <%= image_tag(@product.image_url, class: "img-responsive product-image-show") %>
+      <%= render 'new_comment' %>
     </div><!--/col-lg-8 col-sm-12-->
     
     <div class="col-lg-5 col-sm-12" id="show-image-details">
@@ -36,10 +37,11 @@
     
       <p id="comments">
         <strong>Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div>
+        <strong>Comments</strong>
+        <%= render 'comments' %>
       </p>
       
       
-
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
     </div><!--/col-lg-4 col-sm-12"-->
