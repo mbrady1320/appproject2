@@ -1,5 +1,6 @@
 <div class="product-reviews">
   <% @comments.each do |comment| %>
+  
     <div class="row">
       <hr>
       <p>
@@ -8,6 +9,7 @@
       <div class="rated" data-score="<%= comment.rating %>"></div>
       <p><%= "Rating: #{comment.rating}/5" %></p>
       <p><%= comment.body %></p>
+      
     </div>
   <% end %>
 </div>

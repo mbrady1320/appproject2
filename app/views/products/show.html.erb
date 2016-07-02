@@ -39,6 +39,7 @@
         <strong>Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div>
         <strong>Comments</strong>
         <%= render 'comments' %>
+        <%= will_paginate @comments %>
       </p>
       
       

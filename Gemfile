@@ -11,7 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'cancancan', '~> 1.10'
-
+gem 'will_paginate', '~> 3.1.0'
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
