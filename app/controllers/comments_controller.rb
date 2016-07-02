@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
-    @comments = comment.paginate(:page => params[:page], :per_page => 2)
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
@@ -14,7 +13,6 @@ class CommentsController < ApplicationController
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
-    
   end
   
   def destroy
