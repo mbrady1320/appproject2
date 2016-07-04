@@ -53,6 +53,7 @@
             <%= link_to('LOGIN', new_user_session_path) %>
           <% end %>
         </li>
+        <li><%= link_to'SIGN UP', new_user_registration_path %></li>
         <li class="form-group product-search">
           <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
             <%= label_tag(:q, "Search for:",class:"sr-only") %>
