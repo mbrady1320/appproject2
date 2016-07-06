@@ -16,6 +16,7 @@ gem 'will_paginate', '~> 3.1.0'
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.5.0'
 end
 
 group :development do
