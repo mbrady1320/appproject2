@@ -15,7 +15,10 @@ Rails.application.routes.draw do
   
   post 'static_pages/thank_you'
   
-
   resources :orders, only: [:index, :show, :create, :destroy]
+  
+  devise_scope :user do
+    get '/users', to: "devise/sessions#create"
+  end
   
 end
