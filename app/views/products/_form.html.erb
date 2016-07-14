@@ -1,41 +1,50 @@
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-      <ul>
+      <h3><%= pluralize(@product.errors.count, "error") %> Oops! This product can't be saved:</h3>
+      
       <% @product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
+      
     </div>
   <% end %>
+  
 
-  <div class="field">
+<form id="product-form">  
+  <fieldset>
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
+    <%= f.text_field :name, class: "form-control" %>
+  </fieldset>
+  <fieldset>>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
+    <%= f.text_field :description, class: "form-control" %>
+  </fieldset>
+  <fieldset>
     <%= f.label :text %><br>
-    <%= f.text_field :text %>
-  </div>
-  <div class="field">
+    <%= f.text_area :text, rows:4, class: "form-control" %>
+  </fieldset>
+  
+  <fieldset>
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
+    <%= f.text_field :image_url, class: "form-control" %>
+  </fieldset>
+  <fieldset>
     <%= f.label :colour %><br>
-    <%= f.text_field :colour %>
-  </div>
-    <div class="field">
+    <%= f.text_field :colour, class: "form-control" %>
+  </fieldset>
+  <fieldset>
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: "form-control" %>
+  </fieldset>
+   
+  <div class="button">
+    <%= f.submit class: "btn btn-success"%>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    
+</form>  
+
+ 
+
+ 
 <% end %>
