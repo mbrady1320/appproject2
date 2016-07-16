@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users
-  
+
   
   get 'static_pages/about'
 
@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   
   post 'static_pages/thank_you'
   
-
   resources :orders, only: [:index, :show, :create, :destroy]
+  
+  
   
 end

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe UsersController, :type => :controller do
+
   
   before do
     @user = User.create!(email: "damnraven@gmail.com", password: "123456")
@@ -26,6 +27,5 @@ describe UsersController, :type => :controller do
       end
     end
   end
-
   
 end
