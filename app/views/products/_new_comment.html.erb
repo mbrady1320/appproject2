@@ -2,7 +2,7 @@
   <% if signed_in? %>
     <h4>add a review:</h4>
     
-    <form>
+    <div class="form">
       <%= form_for([@product, @product.comments.build]) do |f| %>
         <fieldset>
           <%= f.label :body, "comments" %><br>
@@ -14,6 +14,6 @@
           <%= f.submit "Submit", class:"btn btn-success" %>
         </div>
       <% end %>
-    </form>
+    </div>
   <% end %>
 </div>
