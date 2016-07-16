@@ -46,19 +46,25 @@
         <li><%=link_to'PRODUCT', products_path%></li>
         <li><%=link_to'ORDER', orders_path%></li>
         <li><%=link_to'CONTACT', static_pages_contact_path%></li>
-        <li>
+        <li id="user-log">
           <% if user_signed_in? %>
             <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %> 
           <% else %>
             <%= link_to('LOGIN', new_user_session_path) %>
           <% end %>
         </li>
-        <li><%= link_to'SIGN UP', new_user_registration_path %></li>
+        <li id="user-register">
+          <% if user_signed_in? %>
+            <%= link_to('EDIT', edit_user_registration_path) %>
+          <% else %>
+            <%= link_to('SIGN UP', new_user_registration_path) %>
+          <% end %>
+        </li>
         <li class="form-group product-search">
           <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
             <%= label_tag(:q, "Search for:",class:"sr-only") %>
             <%= text_field_tag(:q,nil,class: "form-control",placeholder: "Search products") %>
-            <%= submit_tag("Find",class:"btn btn-default btn-green") %>
+            <%= submit_tag("Find",class:"btn btn-success") %>
           <% end %>
         </li><!--/form-group product-search-->
       </ul>
